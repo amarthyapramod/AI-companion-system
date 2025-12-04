@@ -233,10 +233,4 @@ GOOGLE_API_KEY=your_api_key_here  # Required
 - **Frontend**: HTML5, CSS3, Vanilla JavaScript
 - **Deployment**: Render/Railway/Vercel
 
-## 📝 License
 
-MIT License
-
----
-
-**Built with ❤️ for AI companion systems**
