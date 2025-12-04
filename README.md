@@ -165,7 +165,7 @@ Visit `http://localhost:8000/docs` for interactive API documentation
 - **Graceful Degradation**: Fallback responses if AI service is unavailable
 - **Modern UI**: Dark theme with glassmorphism effects
 
-## 🎓 Alignment with GuppShupp Requirements
+## 🎓 Alignment with Requirements
 
 ### LLM Prompting Pipelines ✅
 - Advanced prompt engineering for memory extraction
