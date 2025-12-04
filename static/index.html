@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Companion System - Memory & Personality Engine</title>
+    <meta name="description" content="Advanced AI companion system with memory extraction and personality transformation capabilities">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🧠 AI Companion System</h1>
+            <p class="subtitle">Memory Extraction & Personality Engine</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Memory Extraction Section -->
+        <section class="card" id="memory-section">
+            <h2>💭 Memory Extraction</h2>
+            <p class="description">Extract user preferences, emotional patterns, and important facts from chat messages</p>
+            
+            <div class="form-group">
+                <label for="messages-input">Chat Messages (JSON format)</label>
+                <textarea 
+                    id="messages-input" 
+                    rows="8" 
+                    placeholder='[{"content": "Your message here", "sender": "user"}]'
+                ></textarea>
+                <button id="load-sample-btn" class="btn-secondary">Load Sample Messages</button>
+            </div>
+            
+            <button id="extract-memory-btn" class="btn-primary">Extract Memory</button>
+            
+            <div id="memory-results" class="results hidden">
+                <h3>Extracted Memory</h3>
+                <div id="memory-content"></div>
+            </div>
+        </section>
+
+        <!-- Interactive Chat Section -->
+        <section class="card" id="chat-section">
+            <h2>💬 Interactive Chat</h2>
+            <p class="description">Chat with a specific personality</p>
+            
+            <div class="form-group">
+                <label for="personality-select">Select Personality</label>
+                <select id="personality-select">
+                    <option value="calm_mentor">Calm Mentor</option>
+                    <option value="witty_friend">Witty Friend</option>
+                    <option value="therapist">Therapist</option>
+                    <option value="professional_coach">Professional Coach</option>
+                    <option value="curious_explorer">Curious Explorer</option>
+                </select>
+            </div>
+            
+            <div id="chat-container" class="chat-container">
+                <!-- Chat messages will appear here -->
+                <div class="chat-placeholder">Start a conversation...</div>
+            </div>
+            
+            <div class="chat-input-area">
+                <textarea 
+                    id="chat-input" 
+                    rows="2" 
+                    placeholder="Type your message here..."
+                ></textarea>
+                <button id="send-chat-btn" class="btn-primary">Send</button>
+            </div>
+        </section>
+
+        <!-- Personality Comparison Section -->
+        <section class="card" id="personality-section">
+            <h2>🎭 Personality Engine</h2>
+            <p class="description">See how different personalities respond to the same message</p>
+            
+            <div class="form-group">
+                <label for="user-message">User Message</label>
+                <textarea 
+                    id="user-message" 
+                    rows="3" 
+                    placeholder="I'm feeling really stressed about my upcoming presentation..."
+                ></textarea>
+            </div>
+            
+            <button id="compare-personalities-btn" class="btn-primary">Compare All Personalities</button>
+            
+            <div id="personality-results" class="results hidden">
+                <h3>Personality Responses</h3>
+                <div id="personality-content"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Built with FastAPI, Google Generative AI, and modern web technologies</p>
+            <p class="tech-stack">FastAPI • Gemini • Python • Pydantic</p>
+        </div>
+    </footer>
+
+    <div id="loading-overlay" class="hidden">
+        <div class="spinner"></div>
+        <p>Processing...</p>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
